@@ -5,6 +5,5 @@ services:
 
 jobs:
   include:
-    - stage: Destroy Stage
-      if: branch == main
-      script: echo $TRAVIS_PULL_REQUEST_BRANCH && echo $TRAVIS_BRANCH
+    - stage: Echo
+      script: echo "TRAVIS_PULL_REQUEST_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH} TRAVIS_BRANCH=${TRAVIS_BRANCH}"
