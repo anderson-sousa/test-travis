@@ -12,4 +12,5 @@ jobs:
         - cd ${latestPRCommit}
         - SOURCE_BRANCH=($(git branch -r --contains ${latestPRCommit}))
         - export SOURCE_BRANCH=${SOURCE_BRANCH/origin\//}
+        - echo "SOURCE_BRANCH=${SOURCE_BRANCH}"
         - cd -
