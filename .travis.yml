@@ -1,0 +1,10 @@
+dist: focal
+
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: Destroy Stage
+      if: branch == main
+      script: echo $TRAVIS_PULL_REQUEST_BRANCH && echo $TRAVIS_BRANCH
